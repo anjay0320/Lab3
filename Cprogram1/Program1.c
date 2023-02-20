@@ -94,7 +94,7 @@ void SixMonthMovingAverage(char lines[11][11]) {
 			//printf("%f : %f\n", total, arr[j]);
 		}
 		average = total / 6.0;
-		printf("%10s - %10s     $%8f\n", months[i], months[i + 5], average);
+		printf("%10s - %10s     $%8.2f\n", months[i], months[i + 5], average);
 	}
 
 }
@@ -160,9 +160,9 @@ void SalesReportHighToLow(char lines[11][11]) {
 }
 
 int main() {
-	char inputFile[] = "input.txt";
+	char inputFile[256];
 	printf("Enter a filename: \n");
-	// scanf("%s", inputFile);
+	scanf("%s", inputFile);
 	char contents[11];
 	char lines[11][11];
 	FILE *file_ptr;
